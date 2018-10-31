@@ -1,0 +1,55 @@
+<!--
+  Generated template for the FinancialPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Financial</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-list>
+    <ion-item>
+      <ion-label color="primary" stacked>What is your date of birth?</ion-label>
+      <ion-datetime displayFormat="DD/MM/YYYY" pickerFormat="DD MMMM YYYY" [(ngModel)]="financial.dob"></ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary" stacked>What is your annual income?</ion-label>
+      <ion-select [(ngModel)]="financial.income">
+        <ion-option value="10000">$10000</ion-option>
+        <ion-option value="30000">$30000</ion-option>
+        <ion-option value="50000">$50000</ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+
+  <ion-list radio-group [(ngModel)]="financial.investing">
+    <ion-list-header>
+      <ion-label color="primary" stacked>
+        How do you imagine yourself investing?
+      </ion-label>
+    </ion-list-header>
+    <ion-item>
+      <ion-label>Conservative</ion-label>
+      <ion-radio value="conservative"></ion-radio>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label>Moderate</ion-label>
+      <ion-radio value="moderate"></ion-radio>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label>Aggressive</ion-label>
+      <ion-radio value="aggressive"></ion-radio>
+    </ion-item>
+  </ion-list>
+</ion-content>

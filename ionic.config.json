@@ -1,0 +1,7 @@
+{
+  "name": "prdApp",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
